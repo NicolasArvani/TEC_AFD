@@ -10,7 +10,7 @@ import AFD.AfdParser;
  * @author Isabella Bicudo
  */
 public class main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("Usage: java main <entrada.txt>");
             return;
@@ -21,6 +21,11 @@ public class main {
         File entradaFile = new File(entrada);
         
         AfdParser afdParser = new AfdParser(entradaFile);
-        afdParser.rodarAutomato();
+        try{
+            afdParser.rodarAutomato();
+        }catch(Exception e){
+            System.out.println("Erro: " + e.getMessage());
+            return;
+        }
     }
 }
