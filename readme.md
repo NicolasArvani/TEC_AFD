@@ -6,6 +6,7 @@ se ele aceita ou rejeita cada uma delas, respectivamente.
 
 ## Utilização
 ```bash
+$ javac main.java
 $ java main <entrada.txt>
 ```
 
